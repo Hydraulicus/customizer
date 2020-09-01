@@ -1,5 +1,13 @@
-import PureCanvas from './pureCanvas';
+import Canvas from './canvas/Canvas';
+import DesignConstructor from './designConstructor';
+import text from './canvas/text'
+
+const handlers = {
+  text,
+};
 
 export {
-  PureCanvas,
+  Canvas,
+  DesignConstructor,
+  handlers,
 };

@@ -1,27 +1,23 @@
-import React from 'react';
-import { PureCanvas } from './components';
-// import logo from './logo.svg';
-// import './App.css';
+import React, { useState } from 'react';
+import {
+  DesignConstructor,
+  handlers,
+  Canvas
+} from './components';
 
 function App() {
+  const canvasRef = React.createRef();
+
+  // React.useEffect( () => {
+  //     console.log('useEffect canvasRef = ', canvasRef)
+  //   }, [canvasRef]
+  // );
+
   return (
-    <div className="App">
-      {/*<header className="App-header">*/}
-      {/*  <img src={logo} className="App-logo" alt="logo" />*/}
-      {/*  <p>*/}
-      {/*    Edit <code>src/App.js</code> and save to reload.*/}
-      {/*  </p>*/}
-      {/*  <a*/}
-      {/*    className="App-link"*/}
-      {/*    href="https://reactjs.org"*/}
-      {/*    target="_blank"*/}
-      {/*    rel="noopener noreferrer"*/}
-      {/*  >*/}
-      {/*    Learn React*/}
-      {/*  </a>*/}
-      {/*</header>*/}
-      <PureCanvas/>
-    </div>
+    <React.Fragment>
+      <Canvas ref={canvasRef} />
+      <DesignConstructor canvasRef={canvasRef} handlers={handlers} />
+    </React.Fragment>
   );
 }
 
