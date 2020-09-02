@@ -1,0 +1,12 @@
+{
+  "name": "default template",
+  "id": "someId",
+  "objects": [
+    {
+      "type": "text",
+      "id": "someId",
+      "value": "some text"
+    }
+  ],
+  "thumbnail": null
+}
